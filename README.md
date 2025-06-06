@@ -1,11 +1,11 @@
-﻿# 🛠 Custom T4 Template Setup for Devart EF Core with DevExpress XAF
+# 🛠 Custom T4 Template Setup for Devart EF Core with DevExpress XAF
 
 ## ✅ Requirements
 
 Before you start, make sure you have the following installed:
 
-- **DevExpress XAF** (eXpressApp Framework)  
-  - [Devexpress XAF](https://www.devexpress.com/products/net/application_framework/)
+- **DevExpress XAF** (eXpressApp Framework)
+  - [DevExpress XAF](https://www.devexpress.com/products/net/application_framework/)
 
 - **Devart Entity Developer (Edition for Entity Framework) (7.3.235)**
   - [Devart Entity Developer](https://www.devart.com/entitydeveloper/entity-framework-core-designer.html)
@@ -20,7 +20,9 @@ There are two files:
 
 Copy the two files into the folder located at:
 
+```
 C:\Program Files (x86)\Common Files\Devart\EntityDeveloper\Shared Templates
+```
 
 
 ---
