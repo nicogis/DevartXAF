@@ -32,7 +32,6 @@ C:\Program Files (x86)\Common Files\Devart\EntityDeveloper\Shared Templates
 1. **Create an app using the XAF wizard.**
 
 2. **Save, close, and reopen the project.**
-   - ⚠️ Recommended to avoid potential Devart Entity Developer crashes.
 
 3. **Delete the auto-generated `DbContext` file.**
    - Located in the `BusinessObjects` folder of the module created by the wizard.
