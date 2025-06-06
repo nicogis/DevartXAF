@@ -38,7 +38,7 @@ C:\Program Files (x86)\Common Files\Devart\EntityDeveloper\Shared Templates
    - Located in the `BusinessObjects` folder of the module created by the wizard.
 
 4. **Create a new Devart EF Core model file.**
-   - In the same `BusinessObjects` folder:
+   - In the same `BusinessObjects` folder or other folder:
      - Right-click > Add > New Item
      - Choose: `Data` or `ASP.NET Core > Data`
      - Select: **Devart EF Core Model**
@@ -58,14 +58,8 @@ C:\Program Files (x86)\Common Files\Devart\EntityDeveloper\Shared Templates
    - Select the desired tables.
 
 8. **Set pluralization options:**
-   - Class/method names: `Unchanged`
-   - Entity set pluralization: `Unchanged`
-   - Property names: `Unchanged`
-
+  
 9. **Configure context and namespace:**
-   - `Use connection`: `"ConnectionString"`
-   - `Context class name`: must **match** the one created by the XAF wizard
-   - `Context namespace` and `Entity namespace`: must match the wizard-generated context
 
 10. **Add the custom template:**
     - Click the first "Add Template" button
