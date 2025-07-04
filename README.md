@@ -4,7 +4,7 @@
 
 Before you start, make sure you have the following installed:
 
-- **DevExpress XAF** (eXpressApp Framework)
+- **DevExpress XAF (eXpressApp Framework) (25.1.3)** 
   - [DevExpress XAF](https://www.devexpress.com/products/net/application_framework/)
 
 - **Devart Entity Developer (Edition for Entity Framework) (7.3.235)**
@@ -33,7 +33,7 @@ C:\Program Files (x86)\Common Files\Devart\EntityDeveloper\Shared Templates
 
 2. **Save, close, and reopen the project.**
 
-3. **Delete the auto-generated `DbContext` file.**
+3. **Rename the auto-generated `DbContext` file.**
    - Located in the `BusinessObjects` folder of the module created by the wizard.
 
 4. **Create a new Devart EF Core model file.**
