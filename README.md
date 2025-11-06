@@ -55,8 +55,8 @@ C:\Program Files (x86)\Common Files\Devart\EntityDeveloper\Shared Templates
 7. **Leave the default settings**
   
 8. **Configure context and namespace:**
-    Namespace context/entities: &lt;YourNameProject&gt;.Module.BusinessObjects
-    Context Class Name: &lt;YourNameProject&gt;EFCoreDbContext
+    - Namespace context/entities: &lt;YourNameProject&gt;.Module.BusinessObjects
+    - Context Class Name: &lt;YourNameProject&gt;EFCoreDbContext
   
 9. **Add the custom template:**
     - Click the first "Add Template" button
