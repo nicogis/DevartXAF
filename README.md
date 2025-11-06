@@ -33,18 +33,14 @@ C:\Program Files (x86)\Common Files\Devart\EntityDeveloper\Shared Templates
 
 2. **Save, close, and reopen the project.**
 
-3. **Rename the auto-generated `DbContext` file.**
-   - Located in the `BusinessObjects` folder of the module created by the wizard.
-
-4. **Create a new Devart EF Core model file.**
-   - In the same `BusinessObjects` folder or other folder:
+3. **Create a new Devart EF Core model file.**
      - Right-click > Add > New Item
      - Choose: `Data` or `ASP.NET Core > Data`
      - Select: **Devart EF Core Model**
 
-5. **Select "Database First" approach.**
+4. **Select "Database First" approach.**
 
-6. **Configure the SQL Server connection.**
+5. **Configure the SQL Server connection.**
    - Choose server and database.
    - In **Advanced**, set the following:
      ```
@@ -53,28 +49,47 @@ C:\Program Files (x86)\Common Files\Devart\EntityDeveloper\Shared Templates
      TrustServerCertificate=True
      ```
 
-7. **Generate model from database.**
-   - Select the desired tables.
+6. **Generate model from database.**
+   - Select the desired tables or select them later.
 
-8. **Set pluralization options:**
+7. **Leave the default settings**
   
-9. **Configure context and namespace:**
-
-10. **Add the custom template:**
+8. **Configure context and namespace:**
+    Namespace context/entities: <NameProject>.Module.BusinessObjects
+    Context Class Name: <NameProject>EFCoreDbContext
+  
+9. **Add the custom template:**
     - Click the first "Add Template" button
     - From `Shared`, choose: **EF Core XAF**
     - Remove any other existing template
 
-11. **Click "Finish" to complete the setup.**
+10. **Click "Finish" to complete the setup.**
+
+11. **Change code in XAF wizard**
+```csharp
+//[TypesInfoInitializer(typeof(TelemacoContextInitializer))]
+public partial class TelemacoEFCoreDbContext : DbContext {
+    //public TelemacoEFCoreDbContext(DbContextOptions<TelemacoEFCoreDbContext> options) : base(options) {
+    //}
+    //public DbSet<ModuleInfo> ModulesInfo { get; set; }
+
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder)
+    {
+        modelBuilder.UseDeferredDeletion(this);
+        modelBuilder.UseOptimisticLock();
+        modelBuilder.SetOneToManyAssociationDeleteBehavior(DeleteBehavior.SetNull, DeleteBehavior.Cascade);
+        modelBuilder.HasChangeTrackingStrategy(ChangeTrackingStrategy.ChangingAndChangedNotificationsWithOriginalValues);
+        modelBuilder.UsePropertyAccessMode(PropertyAccessMode.PreferFieldDuringConstruction);
+    }
+    
+}
+```
+     
 
 ---
 
 ## ✅ Result
 
 Your Devart EF Core model will now generate code that’s fully compatible with DevExpress XAF using the customized T4 template.
-
-
-## 📄 Demo
-![Demo](docs/DevartEntityDeveloper_DevExpressXAF.gif)
 
 
