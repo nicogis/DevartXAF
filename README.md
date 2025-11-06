@@ -4,7 +4,7 @@
 
 Before you start, make sure you have the following installed:
 
-- **DevExpress XAF (eXpressApp Framework) (25.1.3)** 
+- **DevExpress XAF (eXpressApp Framework) (25.1.x)** 
   - [DevExpress XAF](https://www.devexpress.com/products/net/application_framework/)
 
 - **Devart Entity Developer (Edition for Entity Framework) (7.3.235)**
